@@ -1,17 +1,53 @@
-# skills-for-vibe-coder
+# 🛠️ Skills for Vibe Coder
 
-为 Vibe Coder 量身定制的 Skill 集合。
+<p align="center">
+  <em>A curated collection of Claude Skills tailored for Vibe Coders</em>
+</p>
 
-## 安装
+<p align="center">
+  <a href="./README_CN.md">中文文档</a>
+</p>
+
+---
+
+## ✨ Overview
+
+This repository contains a set of carefully crafted Claude Skills designed to enhance your coding workflow. Each skill is optimized for agent-based interactions and follows best practices for skill authoring.
+
+## 📦 Installation
+
+Copy all skills to your Claude skills directory:
 
 ```bash
 cp -r skills/* ~/.claude/skills/
 ```
 
-## Skills
+## 🎯 Available Skills
 
-| Skill | 作用 |
-|-------|------|
-| [ast-grep-rule-crafter](skills/ast-grep-rule-crafter) | AST 语法搜索与重写规则 |
-| [clean-code-reviewer](skills/clean-code-reviewer) | 代码质量审查 |
-| [doc-consistency-reviewer](skills/doc-consistency-reviewer) | 文档一致性检查 |
+| Skill | Description |
+|-------|-------------|
+| 🔍 [ast-grep-rule-crafter](skills/ast-grep-rule-crafter) | AST-based structural search and rewrite rules |
+| 📝 [clean-code-reviewer](skills/clean-code-reviewer) | Code quality review and best practices |
+| 📄 [doc-consistency-reviewer](skills/doc-consistency-reviewer) | Documentation consistency checker |
+
+## 📖 Skill Details
+
+### 🔍 ast-grep-rule-crafter
+
+A comprehensive reference for crafting `ast-grep` rules using YAML. Covers atomic patterns, composite rules, relational operators, and project-level configuration.
+
+### 📝 clean-code-reviewer
+
+Provides systematic code quality review guidance focusing on readability, maintainability, and adherence to clean code principles.
+
+### 📄 doc-consistency-reviewer
+
+Ensures documentation consistency by checking for naming conventions, formatting standards, and content alignment across your project.
+
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## 📜 License
+
+MIT
