@@ -18,6 +18,37 @@ fix: logger.log($$$ARGS)
 message: Replace console.log with logger
 ```
 
+## Project Configuration
+
+项目级扫描需要 `sgconfig.yml` 配置文件：
+
+```yaml
+# sgconfig.yml (项目根目录)
+ruleDirs:
+  - rules          # 规则目录，递归加载所有 .yml 文件
+```
+
+典型项目结构：
+
+```
+my-project/
+├── sgconfig.yml
+├── rules/
+│   ├── no-console.yml
+│   └── custom/
+│       └── team-rules.yml
+└── src/
+```
+
+运行项目扫描：
+
+```bash
+ast-grep scan              # 自动查找 sgconfig.yml
+ast-grep scan --config path/to/sgconfig.yml  # 指定配置
+```
+
+> **注意**: `ast-grep scan` 命令必须有 `sgconfig.yml`，而 `ast-grep run -p` 可单独使用。
+
 ## Rule Workflow
 
 ### Lint Rule (常见)
