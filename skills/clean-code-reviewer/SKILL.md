@@ -5,17 +5,21 @@ description: Analyze code quality based on "Clean Code" principles. Identify nam
 
 # Clean Code Review
 
-基于《代码整洁之道》原则，聚焦 5 个高收益检查维度。
+基于《代码整洁之道》原则，聚焦 7 个高收益检查维度。
 
 ## Review Workflow
 
 ```
 Review Progress:
 - [ ] 1. Scan codebase: identify files to review
-- [ ] 2. Check each dimension (naming, functions, DRY, YAGNI, magic numbers)
+- [ ] 2. Check each dimension (naming, functions, DRY, YAGNI, magic numbers, clarity, conventions)
 - [ ] 3. Rate severity (高/中/低) for each issue
 - [ ] 4. Generate report sorted by severity
 ```
+
+## 核心原则：功能保留
+
+所有建议仅针对**实现方式**优化——绝不建议改变代码的功能、输出或行为。
 
 ## Check Dimensions
 
@@ -88,6 +92,45 @@ const MAX_RETRY_COUNT = 3;
 const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 ```
 
+### 6. 结构清晰度【可读性优先】
+
+检查标志：
+- 嵌套三元运算符
+- 过度紧凑的单行代码
+- 过深的条件嵌套（> 3 层）
+
+```typescript
+// ❌ 嵌套三元
+const status = a ? (b ? 'x' : 'y') : (c ? 'z' : 'w');
+
+// ✅ 使用 switch 或 if/else
+function getStatus(a, b, c) {
+  if (a) return b ? 'x' : 'y';
+  return c ? 'z' : 'w';
+}
+```
+
+### 7. 项目规范【一致性】
+
+检查标志：
+- import 顺序混乱或缺少扩展名
+- 箭头函数 vs `function` 声明不一致
+- 顶层函数缺少返回类型注解
+- 命名规范不统一
+
+```typescript
+// ❌ 
+import { foo } from './utils'  // 缺扩展名
+const handler = () => { ... }  // 顶层用箭头函数
+
+// ✅ 
+import { foo } from './utils.js'
+function handler(): void { ... }
+```
+
+> [!TIP]
+> 项目规范应参照 `CLAUDE.md` 或项目约定的编码标准。
+
 ## Severity Levels
 
 | 级别 | 标准 |
@@ -122,8 +165,11 @@ const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
 按以下维度拆分给多 agent 并行：
 
-1. **按检查维度** - 5 维度各一个 agent
+1. **按检查维度** - 7 维度各一个 agent
 2. **按模块/目录** - 不同模块各一个 agent
 3. **按语言** - TypeScript、Python、Go 各一个 agent
+4. **按文件类型** - 组件、hooks、工具函数、类型定义
+
+示例：`/clean-code-reviewer --scope=components` 或 `--dimension=naming`
 
 汇总时需去重和统一严重程度评定。
