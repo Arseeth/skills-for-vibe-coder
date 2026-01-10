@@ -129,7 +129,7 @@ function handler(): void { ... }
 ```
 
 > [!TIP]
-> 项目规范应参照 `CLAUDE.md` 或项目约定的编码标准。
+> 项目规范应参照 `CLAUDE.md` `AGENTS.md` 或项目约定的编码标准。
 
 ## Severity Levels
 
