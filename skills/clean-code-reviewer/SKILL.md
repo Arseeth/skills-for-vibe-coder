@@ -113,19 +113,20 @@ function getStatus(a, b, c) {
 ### 7. 项目规范【一致性】
 
 检查标志：
-- import 顺序混乱或缺少扩展名
-- 箭头函数 vs `function` 声明不一致
-- 顶层函数缺少返回类型注解
-- 命名规范不统一
+- import 顺序混乱（外部库 vs 内部模块）
+- 函数声明风格不一致
+- 命名规范不统一（camelCase vs snake_case 混用）
 
 ```typescript
-// ❌ 
-import { foo } from './utils'  // 缺扩展名
-const handler = () => { ... }  // 顶层用箭头函数
+// ❌ 风格不一致
+import { api } from './api'
+import axios from 'axios'  // 外部库应在前
+const handle_click = () => { ... }  // 命名风格混用
 
-// ✅ 
-import { foo } from './utils.js'
-function handler(): void { ... }
+// ✅ 统一风格
+import axios from 'axios'
+import { api } from './api'
+function handleClick(): void { ... }
 ```
 
 > [!TIP]
